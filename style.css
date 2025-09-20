@@ -45,12 +45,12 @@ header p{
 .sidebar li ul {
   margin-left: 15px;
   padding-left: 0px;
-  border-left: 2px solid #ddd;
+  border-left: 2px solid #6da7ea9b;
 }
 
 .sidebar a {
   text-decoration: none;
-  color: #0077cc;
+  color: #3f4347;
 }
 
 .sidebar a:hover {

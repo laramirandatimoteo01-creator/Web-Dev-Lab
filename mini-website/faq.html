@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .faq-item {
+      margin-bottom: 10px;
+    }
+    .faq-question {
+      cursor: pointer;
+      background: #005f99;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .faq-answer {
+      display: none;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+  </style>
+  <script>
+    function toggleAnswer(id) {
+      var answer = document.getElementById(id);
+      answer.style.display = answer.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Frequently Asked Questions</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="action1.html">Renewable Energy</a></li>
+        <li><a href="action2.html">3Rs</a></li>
+        <li><a href="action3.html">Sustainable Transport</a></li>
+        <li><a href="action4.html">Conserving Resources</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="credits.html">Credits</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Your Questions Answered</h2>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer('a1')">What is the biggest cause of climate change?</div>
+      <div class="faq-answer" id="a1">The burning of fossil fuels such as coal, oil, and gas is the largest contributor.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer('a2')">How can I help as an individual?</div>
+      <div class="faq-answer" id="a2">You can save energy, reduce waste, support renewable energy, and raise awareness.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer('a3')">Why is planting trees important?</div>
+      <div class="faq-answer" id="a3">Trees absorb carbon dioxide, clean the air, and provide habitats for wildlife.</div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Climate Change Explainer</p>
+  </footer>
+</body>
+</html>

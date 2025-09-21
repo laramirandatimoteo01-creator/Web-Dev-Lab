@@ -1,135 +1,151 @@
+/* Fonts */
 body {
-    font-family: "Quicksand", sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f8ff;
-    color: #2a3d66;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #d8e9f0, #f5faff);
+  color: #333;
+  line-height: 1.6;
 }
 
+/* Header */
 header {
-    background-color: #b3d9ff;
-    color: #2a3d66;
-    text-align: center;
-    padding: 2rem 1rem;
-    border-bottom: 5px solid #80bfff;
+  background: linear-gradient(120deg, #4a90e2, #0077b6);
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1rem;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
 header h1 {
-    margin: 0;
-    font-size: 3rem;
-    font-family: "Pacifico", cursive;
+  font-family: 'Pacifico', cursive;
+  font-size: 3rem;
+  margin: 0;
 }
 
 header p {
-    font-size: 1rem;
-    margin-top: 0.5rem;
-    font-weight: 500;
+  font-size: 1.2rem;
+  opacity: 0.9;
 }
 
+/* Section */
 section {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background: #e6f2ff;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 3rem 1.5rem;
+  max-width: 1100px;
+  margin: auto;
 }
 
-h2 {
-    margin-top: 2rem;
-    color: #336699;
-    font-family: "Pacifico", cursive;
-    font-size: 2rem;
-    border-bottom: 2px dashed #80bfff;
-    padding-bottom: 0.3rem;
+section h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #1e4d7b;
+  margin-bottom: 1.5rem;
+  position: relative;
 }
 
-p {
-    font-size: 1rem;
-    line-height: 1.6;
+section h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #4a90e2;
+  margin: 10px auto 0;
+  border-radius: 5px;
 }
 
+/* Menu List as Cards */
 ul {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
 }
 
-li {
-    background: #ffffff;
-    padding: 0.7rem 1rem;
-    border-radius: 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    font-size: 1rem;
-    text-align: center;
-    transition: transform 0.2s;
-    font-family: "Quicksand", sans-serif;
-    font-weight: 500;
+ul li {
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-li::before {
-    content: "☁️ ";
+ul li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  background: #f0f8ff;
 }
 
-li:hover {
-    transform: scale(1.05);
-    background-color: #d9ecff;
+/* About Page Hero */
+.about-hero {
+  background: url('images/cafe-bg.jpg') center/cover no-repeat;
+  position: relative;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
-footer {
-    background-color: #b3d9ff;
-    color: #2a3d66;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-    border-top: 5px solid #80bfff;
-    font-family: "Quicksand", sans-serif;
-}
-
-footer a {
-    color: #1a4d80;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer a:hover {
-    text-decoration: underline;
+.about-hero .overlay {
+  background: rgba(0, 72, 128, 0.6);
+  color: #fff;
+  padding: 4rem 1.5rem;
+  text-align: center;
 }
 
 /* Team Section */
+.team {
+  text-align: center;
+}
+
 .team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .team-card {
-  background: #ffffff;
-  padding: 1rem;
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-  font-family: "Quicksand", sans-serif;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  max-width: 250px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
 }
 
 .team-card img {
-  width: 120px;
-  height: 120px;
+  width: 100%;
   border-radius: 50%;
-  border: 3px solid #b3d9ff;
-  object-fit: cover;
+  margin-bottom: 1rem;
 }
 
-.team-card h3 {
-  margin: 0.5rem 0 0;
-  color: #2a3d66;
-  font-family: "Pacifico", cursive;
+/* Footer */
+footer {
+  background: #1e4d7b;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
-.team-card p {
-  color: #4a6fa5;
+footer a {
+  color: #ffd700;
+  text-decoration: none;
+  margin-left: 10px;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: #fff;
 }

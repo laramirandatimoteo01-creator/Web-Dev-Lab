@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled Content Boxes (Blue Theme)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f4faff;
+      color: #1e3a5f;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #0d2c54;
+    }
+
+    .box {
+      padding: 20px;
+      margin: 20px 0;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    /* Solid border with rounded corners */
+    .solid-box {
+      border: 4px solid #1e4d7b;
+      background: #d9ecf9;
+      border-radius: 12px;
+    }
+    /* Dotted border with asymmetric rounded corners */
+    .dotted-box {
+      border: 6px dotted #003f88;
+      background: #d6e6f2;
+      border-radius: 40px 10px 40px 10px;
+
+    }
+    /* Dashed border with oval shape */
+    .dashed-box {
+      border: 3px dashed #0077b6;
+      background: #e0f7ff;
+      border-radius: 50%;
+      padding: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Styled Content Boxes (Blue Theme)</h1>
+
+<div class="box solid-box">
+    This box has a solid border and rounded corners.
+
+  <div class="box dashed-box">
+    This box has a dashed border and a circular/oval shape.
+  </div>
+
+  <div class="box dotted-box">
+    This box features a dotted border, it has an asymetrical edges.
+  </div>
+</body>
+</html>

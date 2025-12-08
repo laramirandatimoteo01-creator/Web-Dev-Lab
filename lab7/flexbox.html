@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Layout Showcase</title>
+  <style>
+  body {
+    font-family: 'Quicksand', sans-serif;
+    background: #dbeafe; /* soft blue background */
+    color: #1e3a8a; /* deep blue text */
+    margin: 20px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1e3a8a;
+  }
+
+  .title {
+    color: #1e3a8a;
+  }
+
+  .flex-container {
+    display: flex;
+    background: #bfdbfe; /* light blue container */
+    padding: 15px;
+    border-radius: 10px;
+    height: 150px;
+  }
+
+  .box {
+    width: 60px;
+    height: 40px;
+    background: #3b82f6; /* bright blue boxes */
+    border-radius: 5px;
+    margin: 5px;
+  }
+</style>
+
+</head>
+<body>
+
+  <h1>Flexbox Layout Demonstrations</h1>
+
+  <div class="example">
+    <div class="title">Items aligned at the start</div>
+    <div class="flex-container flex-start">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </div>
+
+  <div class="example">
+    <div class="title">Items aligned at the end</div>
+    <div class="flex-container flex-end">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </div>
+
+  <div class="example">
+    <div class="title">Items centered</div>
+    <div class="flex-container center">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </div>
+
+  <div class="example">
+    <div class="title">Items stretched vertically</div>
+    <div class="flex-container stretch">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </div>
+
+  <div class="example">
+    <div class="title">Even spacing between items</div>
+    <div class="flex-container space-between">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </div>
+
+  <div class="example">
+    <div class="title">Even spacing around items</div>
+    <div class="flex-container space-around">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </div>
+
+</body>
+</html>

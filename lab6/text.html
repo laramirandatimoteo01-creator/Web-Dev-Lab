@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Style</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #e8f1ff;
+        }
+
+        /* Header */
+        .header {
+            background: #1b4f9c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            background: #d6e6ff;
+            height: 100vh;
+            padding-top: 20px;
+            box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+            position: fixed;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 14px 20px;
+            margin: 6px 12px;
+            text-decoration: none;
+            background: #bcd3ff;
+            color: #0f2f63;
+            border-radius: 8px;
+            font-size: 17px;
+            transition: 0.2s;
+        }
+
+        .sidebar a:hover {
+            background: #8eb7ff;
+        }
+
+        /* Main Content Area */
+        .content {
+            margin-left: 270px;
+            padding: 30px;
+            font-size: 18px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 80vh;
+            border: 2px solid #a9c7ff;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        COURSE RESOURCE HUB
+    </div>
+
+    <div class="sidebar">
+        <a href="home.html" target="main-frame">Home</a>
+        <a href="about.html" target="main-frame">About the Course</a>
+        <a href="activities.html" target="main-frame">Activities</a>
+        <a href="resources.html" target="main-frame">Resources</a>
+        <a href="contact.html" target="main-frame">Contact Instructor</a>
+    </div>
+
+    <div class="content">
+        <iframe name="main-frame" src="home.html"></iframe>
+    </div>
+
+</body>
+</html>

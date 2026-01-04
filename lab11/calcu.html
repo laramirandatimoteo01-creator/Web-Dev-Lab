@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blue Calculator</title>
+
+  <style>
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h2 {
+      color: #0d47a1;
+      margin-bottom: 25px;
+      font-size: 2.2rem;
+      font-weight: 600;
+    }
+
+    .calculator {
+      background-color: #ffffff;
+      padding: 35px 45px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      width: 340px;
+    }
+
+    input {
+      width: 200px;
+      padding: 12px;
+      margin: 12px 0;
+      border: 2px solid #1565c0;
+      border-radius: 8px;
+      outline: none;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    input:focus {
+      border-color: #42a5f5;
+      box-shadow: 0 0 8px rgba(66, 165, 245, 0.6);
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    button {
+      background: linear-gradient(135deg, #1e88e5, #42a5f5);
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 6px;
+      width: 120px;
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #1565c0, #1e88e5);
+      transform: scale(1.05);
+    }
+
+    #result {
+      margin-top: 25px;
+      font-size: 1.3rem;
+      color: #0d47a1;
+      font-weight: 600;
+      min-height: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="calculator">
+    <h2>Blue Math Calculator</h2>
+
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+
+    <div class="buttons">
+      <button onclick="calculate('add')">➕ Add</button>
+      <button onclick="calculate('subtract')">➖ Subtract</button>
+      <button onclick="calculate('multiply')">✖ Multiply</button>
+      <button onclick="calculate('divide')">➗ Divide</button>
+    </div>
+
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function calculate(operation) {
+      const n1 = parseFloat(document.getElementById("num1").value);
+      const n2 = parseFloat(document.getElementById("num2").value);
+      let message = "";
+
+      if (isNaN(n1) || isNaN(n2)) {
+        message = "Please enter both numbers 🙂";
+      } else {
+        switch (operation) {
+          case "add":
+            message = "Result: " + (n1 + n2);
+            break;
+          case "subtract":
+            message = "Result: " + (n1 - n2);
+            break;
+          case "multiply":
+            message = "Result: " + (n1 * n2);
+            break;
+          case "divide":
+            message = n2 === 0 
+              ? "Division by zero is not allowed ❌"
+              : "Result: " + (n1 / n2);
+            break;
+        }
+      }
+
+      document.getElementById("result").innerText = message;
+    }
+  </script>
+
+</body>
+</html>

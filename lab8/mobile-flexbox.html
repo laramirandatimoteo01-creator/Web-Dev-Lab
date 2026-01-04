@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Flexbox Experience</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fdfbfb 0%, #f0f4f8 100%);
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 3rem;
+    }
+
+    p {
+      color: #5d6d7e;
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 1.25rem;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .card {
+      flex: 1;
+      background: #8e44ad;
+      color: white;
+      padding: 60px 30px;
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: all 0.35s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: rgba(255, 255, 255, 0.2);
+      transform: rotate(30deg);
+      transition: 0.5s;
+    }
+
+    .card:hover::after {
+      top: -20%;
+      left: -20%;
+    }
+
+    .card:hover {
+      transform: translateY(-12px) scale(1.08);
+      box-shadow: 0 16px 28px rgba(0,0,0,0.2);
+    }
+
+    .card:nth-child(2) { background: #e74c3c; } 
+    .card:nth-child(3) { background: #27ae60; }  
+
+    @media (min-width: 768px) {
+      .container {
+        flex-direction: row;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Explore Your World</h1>
+  <p>Tap a card to start an exciting journey. Resize to see it adapt seamlessly!</p>
+
+  <div class="container">
+    <div class="card" onclick="alert('Get ready to explore breathtaking destinations around the globe!')"> Adventure Awaits</div>
+    <div class="card" onclick="alert('Indulge in mouthwatering dishes and culinary masterpieces!')"> Taste the World</div>
+    <div class="card" onclick="alert('Unlock practical advice to improve your daily life and grow stronger!')"> Life Mastery</div>
+  </div>
+
+</body>
+</html>

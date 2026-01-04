@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLACKPINK Member Cards</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #000000, #1a1a1a); /* dark black theme */
+      margin: 0;
+      padding: 40px;
+      color: #fff;
+    }
+
+    h1 {
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+      color: #ff007f; /* pink accent */
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #1c1c1c; /* dark card background */
+      color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(255,0,127,0.5); /* pink glow on hover */
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card h3 {
+      margin: 10px 0;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #ff66b3; /* soft pink */
+    }
+
+    .card span {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #ff007f; /* vibrant pink */
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <h1>BLACKPINK Members</h1>
+
+  <div class="card-container">
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Jisoo_2020.jpg" alt="Jisoo">
+      <div class="card-content">
+        <h3>Jisoo</h3>
+        <span>Lead Vocalist</span>
+        <p>Known for her stunning visuals and powerful vocals, Jisoo brings charm and elegance to BLACKPINK.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Jennie_Kim_at_Music_Station%2C_2019.jpg" alt="Jennie">
+      <div class="card-content">
+        <h3>Jennie</h3>
+        <span>Main Rapper & Vocalist</span>
+        <p>Jennie is a versatile performer, blending rap and vocals with fierce stage presence and charisma.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Ros%C3%A9_of_BLACKPINK.jpg" alt="Rosé">
+      <div class="card-content">
+        <h3>Rosé</h3>
+        <span>Main Vocalist</span>
+        <p>Rosé's unique voice and emotional delivery make her one of the standout vocalists of BLACKPINK.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Lisa_BLACKPINK_2020.jpg" alt="Lisa">
+      <div class="card-content">
+        <h3>Lisa</h3>
+        <span>Main Dancer & Rapper</span>
+        <p>Lisa captivates with her powerful dance moves, charisma, and rap skills, making her a global icon.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

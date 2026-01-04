@@ -111,14 +111,14 @@
 </head>
 <body>
 
-  <h1>📊 Product Inventory</h1>
+  <h1>Product Inventory</h1>
 
   <div class="table-container">
     <table id="productTable">
       <thead>
         <tr>
           <th>Product Name</th>
-          <th>Quantity</th>
+          <th>Stock</th>
           <th>Price (₱)</th>
         </tr>
       </thead>
@@ -127,18 +127,19 @@
       </tbody>
     </table>
 
-    <button class="btn-add" onclick="addNewRow()">➕ Add Product</button>
+    <button class="btn-add" onclick="addNewRow()">➕ Add New Item</button>
   </div>
 
   <footer>
-    &copy; 2025 Web Dev Lab | Dynamic Table
+    &copy; 2025 Web Dev Lab | Modern Inventory
   </footer>
 
   <script>
     const products = [
-      { name: "Iced Latte", quantity: 12, price: 120 },
-      { name: "Chocolate Muffin", quantity: 8, price: 90 },
-      { name: "Caramel Frappe", quantity: 10, price: 150 }
+      { name: "Espresso", quantity: 15, price: 95 },
+      { name: "Blueberry Muffin", quantity: 20, price: 85 },
+      { name: "Vanilla Latte", quantity: 12, price: 130 },
+      { name: "Green Tea Smoothie", quantity: 10, price: 145 }
     ];
 
     const tbody = document.querySelector("#productTable tbody");
@@ -158,7 +159,7 @@
 
     function addNewRow() {
       const name = prompt("Enter product name:");
-      const quantity = prompt("Enter quantity:");
+      const quantity = prompt("Enter stock quantity:");
       const price = prompt("Enter price (₱):");
 
       if (name && quantity && price) {
